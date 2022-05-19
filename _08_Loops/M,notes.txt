@@ -1,0 +1,53 @@
+if ,else,elif ,for,while:
+
+1  while loop
+		Repeats a statement or group of statements while a given condition is TRUE. 
+It tests the condition before executing the loop body.
+
+2  for loop
+	Executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
+
+3  nested loops
+	You can use one or more loop inside any another while, 
+for or do..while loop.
+
+
+
+
+1.while:
+	A while loop statement in Python programming language repeatedly executes a target statement as long as a given condition is true.
+
+   Syntax:
+		The syntax of a while loop in Python programming language is −
+
+			while expression:
+			 statement(s)
+
+	Here, statement(s) may be a single statement or a block of statements. 
+	The condition may be any expression, and true is any non-zero value.
+ 	The loop iterates while the condition is true.
+
+
+2.For:
+	A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+	This is less like the for keyword in other programming languages, 
+	and works more like an iterator method as found in other object-orientated programming languages.
+	With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+
+		fruits = ["apple", "banana", "cherry"]
+		for x in fruits:
+		  print(x)
+
+3.Nested:
+
+	if,elif,else
+	
+num = float(input("Enter a number: "))
+if num >= 0:
+    if num == 0:
+        print("Zero")
+    else:
+        print("Positive number")
+else:
+    print("Negative number")

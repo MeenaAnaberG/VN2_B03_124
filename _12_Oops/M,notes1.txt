@@ -1,0 +1,248 @@
+OOPS :
+	Object-oriented programming (OOP) is a programming paradigm based on the concept of "objects". The object contains both data and code: Data in the form of properties (often known as attributes), and code, in the form of methods (actions object can perform).
+	
+	An object has the following two characteristics:
+		Attribute
+		Behavior
+
+CLASSES AND OBJECTS:
+
+Class: 
+	The class is a user-defined data structure that binds the data members and methods into a single unit.
+ Class is a blueprint or code template for object creation. Using a class, you can create as many objects as you want.
+
+
+Object: 	
+	An object is an instance of a class.
+ It is a collection of attributes (variables) and methods. We use the object of a class to perform actions.
+
+
+Every object has the following property.
+
+Identity: Every object must be uniquely identified.
+State: An object has an attribute that represents a state of an object, and it also reflects the property of an object.
+Behavior: An object has methods that represent its behavior.
+
+
+class class_name:
+    '''This is a docstring. I have created a new class'''
+    <statement 1>
+    <statement 2>
+    .
+    .
+    <statement N>
+
+
+class_name: It is the name of the class
+Docstring: It is the first string inside the class and has a brief description of the class. Although not mandatory, this is highly recommended.
+statements: Attributes and methods
+
+
+
+EXAMPLE:
+
+class Person:
+    def __init__(self, name, sex, profession):
+        # data members (instance variables)
+        self.name = name
+        self.sex = sex
+        self.profession = profession
+
+    # Behavior (instance methods)
+    def show(self):
+        print('Name:', self.name, 'Sex:', self.sex, 'Profession:', self.profession)
+
+    # Behavior (instance methods)
+    def work(self):
+        print(self.name, 'working as a', self.profession)
+
+
+
+CONSTRUCTOR:
+
+A constructor is a special method used to create and initialize an object of a class. 
+This method is defined in the class.
+
+In Python, Object creation is divided into two parts in Object Creation and Object initialization
+
+Internally, 
+	the __new__ is the method that creates the object
+And,
+	 using the __init__() method we can implement constructor to initialize the object.
+
+
+
+					<object-name> = <class-name>(<arguments>)
+
+
+
+
+Home » Python » Python Object-Oriented Programming (OOP) » Classes and Objects in Python
+Classes and Objects in Python
+Updated on: August 28, 2021 | 9 Comments
+
+Python is an object-oriented programming language. This means that almost all the code is implemented using a special construct called classes. A class is a code template for creating objects.
+
+After reading this article, you will learn:
+
+What is class and objects in Python
+Class attributes and methods
+Creating and accessing object properties
+Modify and delete an object
+Table of contents
+What is a Class and Objects in Python?
+Create a Class in Python
+Create Object of a Class
+Class Attributes
+Class Methods
+Class Naming Convention
+pass Statement in Class
+Object Properties
+Modify Object Properties
+Delete object properties
+Delete Objects
+
+What is a Class and Objects in Python?
+Class: The class is a user-defined data structure that binds the data members and methods into a single unit. Class is a blueprint or code template for object creation. Using a class, you can create as many objects as you want.
+Object: An object is an instance of a class. It is a collection of attributes (variables) and methods. We use the object of a class to perform actions.
+Objects have two characteristics: They have states and behaviors (object has attributes and methods attached to it) Attributes represent its state, and methods represent its behavior. Using its methods, we can modify its state.
+
+
+In short, Every object has the following property.
+
+Identity: Every object must be uniquely identified.
+State: An object has an attribute that represents a state of an object, and it also reflects the property of an object.
+Behavior: An object has methods that represent its behavior.
+Python is an Object-Oriented Programming language, so everything in Python is treated as an object. An object is a real-life entity. It is the collection of various data and functions that operate on those data.
+
+For example, If we design a class based on the states and behaviors of a Person, then States can be represented as instance variables and behaviors as class methods.
+
+
+understand class and objects in Python
+understand class and objects in Python
+
+A real-life example of class and objects.
+
+Class: Person
+
+State: Name, Sex, Profession
+Behavior: Working, Study
+Using the above class, we can create multiple objects that depict different states and behavior.
+
+Object 1: Jessa
+
+State:
+Name: Jessa
+Sex: Female
+Profession: Software Engineer
+Behavior:
+Working: She is working as Software developer in ABC Company
+Study: She study 2 hours a day
+Object 2: Jon
+
+State:
+Name: Jon
+Sex: Male
+Profession: Doctor
+Behavior:
+Working: He is working as Doctor
+Study: She study 5 hours a day
+As you can see, Jessa is female, and she works as a Software engineer. On the other hand, Jon is a male, and he is a lawyer. Here, both objects are created from the same class, but they have different states and behaviors.
+
+
+Create a Class in Python
+In Python, class is defined by using the class keyword. The syntax to create a class is given below.
+
+Syntax
+
+class class_name:
+    '''This is a docstring. I have created a new class'''
+    <statement 1>
+    <statement 2>
+    .
+    .
+    <statement N>
+
+class_name: It is the name of the class
+Docstring: It is the first string inside the class and has a brief description of the class. Although not mandatory, this is highly recommended.
+statements: Attributes and methods
+Example: Define a class in Python
+
+In this example, we are creating a Person Class with name, sex, and profession instance variables.
+
+class Person:
+    def __init__(self, name, sex, profession):
+        # data members (instance variables)
+        self.name = name
+        self.sex = sex
+        self.profession = profession
+
+    # Behavior (instance methods)
+    def show(self):
+        print('Name:', self.name, 'Sex:', self.sex, 'Profession:', self.profession)
+
+    # Behavior (instance methods)
+    def work(self):
+        print(self.name, 'working as a', self.profession)
+
+Create Object of a Class
+An object is essential to work with the class attributes. The object is created using the class name. When we create an object of the class, it is called instantiation. The object is also called the instance of a class.
+
+A constructor is a special method used to create and initialize an object of a class. This method is defined in the class.
+
+In Python, Object creation is divided into two parts in Object Creation and Object initialization
+
+Internally, the __new__ is the method that creates the object
+And, using the __init__() method we can implement constructor to initialize the object.
+
+Read More: Constructors in Python
+
+Syntax
+
+<object-name> = <class-name>(<arguments>)  
+
+
+
+
+CLASS ATTRIBUTE:
+
+
+In Class, attributes can be defined into two parts:
+
+Instance variables:
+	 The instance variables are attributes attached to an instance of a class. 
+We define instance variables in the constructor ( the __init__() method of a class).
+Class Variables: 
+	A class variable is a variable that is declared inside of class, but outside of any instance method or __init__() method.
+
+
+
+
+CLASS METHOD:
+	
+Instance method:	
+	 Used to access or modify the object state. If we use instance variables inside a method, such methods are called instance methods.
+
+Class method:
+	 Used to access or modify the class state. 
+	In method implementation, if we use only class variables, then such type of methods we should declare as a class method.
+
+Static method: 
+	It is a general utility method that performs a task in isolation. 
+	Inside this method, we don’t use instance or class variable because this static method doesn’t have access to the class attributes
+
+
+
+Rule-1: Class names should follow the UpperCaseCamelCase convention
+Rule-2: Exception classes should end in “Error“.
+Rule-3: If a class is callable (Calling the class from somewhere), in that case, we can give a class name like a function.
+Rule-4: Python’s built-in classes are typically lowercase words
+
+
+
+pass statement:
+ NULL statement
+	The pass statement is used to have an empty block in a code because the empty code is not allowed in loops, function definition, class definition. Thus, the pass statement will results in no operation (NOP).
+
+
+

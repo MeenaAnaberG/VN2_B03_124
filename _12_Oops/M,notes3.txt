@@ -1,0 +1,59 @@
+INHERITANCE:
+	The process of inheriting the properties of the parent class into a child class is called inheritance. 
+The existing class is called a base class or parent class and the new class is called a subclass or child class or derived class.
+
+
+SYNTAX:
+
+class BaseClass:
+  Body of base class
+class DerivedClass(BaseClass):
+  Body of derived class
+
+
+The type of inheritance are listed below:
+
+Single inheritance
+	PARENT ----------> CHILD
+
+Multiple Inheritance
+	PARENT----->CHILD<--------PARENT
+
+Multilevel inheritance
+	PARENT----->CHILD-------->SUB CHILD
+
+Hierarchical Inheritance
+		PARENT
+
+	CHILD1    CHILD2     CHILD3
+
+Hybrid Inheritance
+		PARENT
+
+	CHILD1		CHILD2
+
+		CHILD3
+
+
+
+Benefits of using the super() function:
+
+We are not required to remember or specify the parent class name to access its methods.
+We can use the super() function in both single and multiple inheritances.
+The super() function support code reusability as there is no need to write the entire function
+
+
+MRO:
+	The MRO plays an essential role in multiple inheritances as a single method may found in multiple parent classes
+
+
+In multiple inheritance, the following search order is followed.
+
+First, it searches in the current parent class if not available, then searches in the parents class specified while inheriting (that is left to right.)
+We can get the MRO of a class. 
+For this purpose, we can use either the mro attribute or the mro() method.
+
+
+
+
+
